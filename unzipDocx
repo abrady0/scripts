@@ -17,4 +17,8 @@ cp $docxInPath .
 unzip $docxFn
 rm $docxFn
 cd word
-xmllint --format document.xml | sponge document.xml
+#xmllint --format document.xml | sponge document.xml
+find **/*.xml | while read -r line ; do
+    echo "formatting $line"
+    xmllint --format "$line" | sponge "$line"
+done
