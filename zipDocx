@@ -1,0 +1,13 @@
+#!/bin/bash
+#source ~/.zshrc
+set -e
+if [[ $# -ne 1 ]]; then
+  echo "usage $0 dir_to_export"
+  exit 1;
+fi
+
+cd $1
+out=$1$RANDOM.docx
+echo $out
+zip -qr ../$out *
+open ../$out

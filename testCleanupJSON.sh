@@ -1,0 +1,5 @@
+echo '[0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5]' | node ~/dev/scripts/cleanupJSON.js
+echo '[0,1,2,3,4,5,6,7,8,9]' | node ~/dev/scripts/cleanupJSON.js
+echo '{"a":"b","foo":{"bar":{"baz":"blow"}},"foo2":{"bar":{"baz":"blow"}},"foo3":{"bar":{"baz":"blow"}},"foo4":{"bar":{"baz":"blow"}}}' | node ~/dev/scripts/cleanupJSON.js
+#echo '[{"content":"delete","modifiers":[{"data":{"authorID":"5","undoCount":0},"end":5,"start":0,"type":"ai"},{"data":{"authorID":"5","revert":"delete","revertData":{},"undoCount":0},"end":6,"start":5,"type":"ad"}],"tabLevel":0,"type":"paragraph"}]' | node ~/dev/scripts/cleanupJSON.js
+echo '[{"content":"01234567890123456789012345678901234567890123456789","modifiers":[{"data":{"authorID":"5","undoCount":0},"end":5,"start":0,"type":"ai"},{"data":{"authorID":"5","revert":"delete","revertData":{},"undoCount":0},"end":6}],"tabLevel":0,"type":"paragraph"}]' | node ~/dev/scripts/cleanupJSON.js
